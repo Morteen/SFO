@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/mandag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Mandag"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/fNavn"
+        android:layout_toEndOf="@+id/fNavn" />
+
+    <TextView
+        android:id="@+id/fNavn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="morten" />
+
+    <TextView
+        android:id="@+id/tTirsdag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_toLeftOf="@+id/onsdag"
+        android:layout_toStartOf="@+id/onsdag"
+        android:text="tirsdag" />
+
+    <TextView
+        android:id="@+id/onsdag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Onsdag"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/torsdag"
+        android:layout_toStartOf="@+id/torsdag"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp" />
+
+    <TextView
+        android:id="@+id/torsdag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Torsdag"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/fredag"
+        android:layout_toStartOf="@+id/fredag"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp" />
+
+    <TextView
+        android:id="@+id/fredag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="fredag" />
+
+</RelativeLayout>
