@@ -1,5 +1,6 @@
 package com.example.morten.sfo_organiser;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -9,9 +10,32 @@ import java.util.List;
 public class Elev {
     private String Fnavn;
     private String Enavn;
-    private String Dag;
+    private boolean[]SFO_dager= new boolean[5] ;
 
 
+
+    public String getMerknader() {
+        return Merknader;
+    }
+
+
+    public void setMerknader(String merknader) {
+        Merknader = merknader;
+    }
+    //Boolean mandag, tirsdag,onsdag,torsdag,fredag=false;
+    //List<Boolean> Uka= Arrays.asList(mandag, tirsdag, onsdag, torsdag,fredag);
+    List<String> Uka= Arrays.asList("mandag", "tirsdag", "onsdag", "torsdag","fredag");
+
+    private String Merknader;
+
+
+    public boolean getSFO_dager(int ukedagNr) {
+        return SFO_dager[ukedagNr];
+    }
+
+    public void setSFO_dager(int ukedagNr,boolean SFO_dager) {
+        this.SFO_dager[ukedagNr] = SFO_dager;
+    }
 
     private List<String>Dager;
 
@@ -32,9 +56,7 @@ public class Elev {
         Enavn = enavn;
     }
 
-    public String getDag() {
-        return Dag;
-    }
+
 
     public void setDag(String dag) {
         dag = dag;

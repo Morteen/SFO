@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,9 +22,7 @@ public class ElevAdapter extends BaseAdapter {
     Context mContext;
     ArrayList<Elev> Elever;
     LayoutInflater mInflater;
-    List<String> Uka= Arrays.asList("mandag", "tirsdag", "onsdag", "torsdag","fredag");
-
-
+    List<String> Uka = Arrays.asList("mandag", "tirsdag", "onsdag", "torsdag", "fredag");
 
 
     public ElevAdapter(Context mContext, ArrayList<Elev> Elever) {
@@ -66,8 +65,8 @@ public class ElevAdapter extends BaseAdapter {
             viewHolder.onsdag = (TextView) convertView.findViewById(R.id.onsdag);
             viewHolder.torsdag = (TextView) convertView.findViewById(R.id.torsdag);
             viewHolder.fredag = (TextView) convertView.findViewById(R.id.fredag);
-
-
+            viewHolder.checkInn = (CheckBox) convertView.findViewById(R.id.checkInn);
+            viewHolder.checkOut = (CheckBox) convertView.findViewById(R.id.checkOut);
 
 
             convertView.setTag(viewHolder);
@@ -79,29 +78,44 @@ public class ElevAdapter extends BaseAdapter {
         Elev currentElev = Elever.get(position);
         //Setter verdien til  turmaal objektet  i denne posisjonen i riktig textview
         viewHolder.tvElevFornavn.setText(currentElev.getFnavn());
-        if( currentElev.getDag().equals(Uka.get(0))){
-        viewHolder.mandag.setBackgroundColor(Color.GREEN);
+
+        if (currentElev.getSFO_dager(0)) {
+            viewHolder.mandag.setBackgroundColor(Color.GREEN);
+        } else {
+            viewHolder.mandag.setBackgroundColor(Color.RED);
         }
-        if( currentElev.getDag().equals(Uka.get(1))){
+
+        if (currentElev.getSFO_dager(1)) {
             viewHolder.tirsdag.setBackgroundColor(Color.GREEN);
+        } else {
+            viewHolder.tirsdag.setBackgroundColor(Color.RED);
         }
-        if( currentElev.getDag().equals(Uka.get(2))){
+
+        if (currentElev.getSFO_dager(2)) {
             viewHolder.onsdag.setBackgroundColor(Color.GREEN);
+        } else {
+            viewHolder.onsdag.setBackgroundColor(Color.RED);
         }
-        if( currentElev.getDag().equals(Uka.get(3))){
+        if (currentElev.getSFO_dager(3)) {
             viewHolder.torsdag.setBackgroundColor(Color.GREEN);
+        } else {
+            viewHolder.torsdag.setBackgroundColor(Color.RED);
         }
-        if( currentElev.getDag().equals(Uka.get(4))){
+        if (currentElev.getSFO_dager(4)) {
             viewHolder.fredag.setBackgroundColor(Color.GREEN);
+        } else {
+            viewHolder.fredag.setBackgroundColor(Color.RED);
         }
+        if (viewHolder.checkOut.isChecked()) {
+            viewHolder.checkInn.setEnabled(false);
+        }
+
 
         //viewHolder.tvStartHoyde.setText(Integer.toString(currentMaal.getHoyde()) + " meter");
 
 
-
         return convertView;
     }
-
 
 
     private static class ViewHolder {
@@ -111,7 +125,8 @@ public class ElevAdapter extends BaseAdapter {
         public TextView onsdag;
         public TextView torsdag;
         public TextView fredag;
-
+        public CheckBox checkInn;
+        public CheckBox checkOut;
 
 
     }
