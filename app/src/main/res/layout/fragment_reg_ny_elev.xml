@@ -20,7 +20,7 @@
             android:layout_alignParentStart="true" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/editFnavn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -31,76 +31,87 @@
             android:text="Name" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/editEnavn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/editText"
-            android:layout_alignStart="@+id/editText"
-            android:layout_below="@+id/editText"
+            android:layout_alignLeft="@+id/editFnavn"
+            android:layout_alignStart="@+id/editFnavn"
+            android:layout_below="@+id/editFnavn"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxMandag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox"
-            android:layout_alignTop="@+id/checkBox3"
-            android:layout_toLeftOf="@+id/checkBox5"
-            android:layout_toStartOf="@+id/checkBox5"
-            android:layout_marginRight="30dp"
-            android:layout_marginEnd="30dp" />
+            android:text="Mandag"
+            android:layout_below="@+id/textView"
+            android:layout_alignLeft="@+id/editEnavn"
+            android:layout_alignStart="@+id/editEnavn"
+            android:layout_marginTop="24dp" />
 
         <CheckBox
-            android:id="@+id/checkBox2"
+            android:id="@+id/checkBoxTirsdag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox"
-            android:layout_alignBottom="@+id/checkBox3"
+            android:text="Tirsdag"
+            android:layout_alignBaseline="@+id/checkBoxMandag"
+            android:layout_alignBottom="@+id/checkBoxMandag"
             android:layout_toRightOf="@+id/textView"
             android:layout_toEndOf="@+id/textView" />
 
         <CheckBox
-            android:id="@+id/checkBox3"
+            android:id="@+id/checkBoxOnsdag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox"
-            android:layout_alignBottom="@+id/checkBox4"
-            android:layout_toRightOf="@+id/editText2"
-            android:layout_toEndOf="@+id/editText2"
-            android:layout_marginBottom="46dp" />
+            android:text="Onsdag"
+
+
+            android:layout_below="@+id/checkBoxMandag"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView" />
 
         <CheckBox
-            android:id="@+id/checkBox4"
+            android:id="@+id/checkBoxTorsdag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CheckBox"
-            android:layout_below="@+id/textView"
-            android:layout_toRightOf="@+id/editText2"
-            android:layout_toEndOf="@+id/editText2"
-            android:layout_marginLeft="51dp"
-            android:layout_marginStart="51dp"
-            android:layout_marginTop="92dp" />
+            android:text="Torsdag"
+            android:layout_below="@+id/checkBoxTirsdag"
+            android:layout_alignRight="@+id/checkBoxTirsdag"
+            android:layout_alignEnd="@+id/checkBoxTirsdag" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/editText2"
+            android:layout_below="@+id/editEnavn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="43dp"
             android:text="Sfo dager" />
 
         <CheckBox
-            android:id="@+id/checkBox5"
+            android:id="@+id/checkBoxFredag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/checkBox2"
-            android:layout_alignBottom="@+id/checkBox2"
-            android:layout_alignLeft="@+id/textView"
-            android:layout_alignStart="@+id/textView"
-            android:text="CheckBox" />
+            android:text="Fredag"
+            android:layout_below="@+id/checkBoxTorsdag"
+            android:layout_alignRight="@+id/checkBoxMandag"
+            android:layout_alignEnd="@+id/checkBoxMandag"
+            android:layout_alignLeft="@+id/checkBoxOnsdag"
+            android:layout_alignStart="@+id/checkBoxOnsdag" />
+
+        <EditText
+            android:id="@+id/editTlf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:layout_below="@+id/checkBoxOnsdag"
+            android:layout_alignLeft="@+id/checkBoxFredag"
+            android:layout_alignStart="@+id/checkBoxFredag"
+            android:layout_marginTop="28dp" />
     </RelativeLayout>
 
 </FrameLayout>

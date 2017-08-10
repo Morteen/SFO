@@ -10,9 +10,16 @@ import java.util.List;
 public class Elev {
     private String Fnavn;
     private String Enavn;
+    private String tlfNr;
     private boolean[]SFO_dager= new boolean[5] ;
 
+    public String getTlfNr() {
+        return tlfNr;
+    }
 
+    public void setTlfNr(String tlfNr) {
+        this.tlfNr = tlfNr;
+    }
 
     public String getMerknader() {
         return Merknader;
