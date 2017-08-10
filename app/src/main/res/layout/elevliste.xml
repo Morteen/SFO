@@ -2,20 +2,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="10dp"
-    android:layout_marginLeft="15dp">
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="10dp">
 
     <TextView
         android:id="@+id/mandag"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Mandag"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/fNavn"
-        android:layout_toEndOf="@+id/fNavn"
         android:layout_marginLeft="37dp"
-        android:layout_marginStart="37dp" />
+        android:layout_marginStart="37dp"
+        android:layout_toEndOf="@+id/fNavn"
+        android:layout_toRightOf="@+id/fNavn"
+        android:layout_weight="1"
+        android:text="Mandag" />
 
     <TextView
         android:id="@+id/fNavn"
@@ -26,9 +26,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_weight="1"
-        android:text="Morten"
         android:fontFamily="serif"
-        android:textAppearance="@color/colorPrimary"/>
+        android:text="Morten"
+        android:textAppearance="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/tTirsdag"
@@ -36,10 +36,10 @@
         android:layout_height="wrap_content"
 
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/mandag"
-        android:layout_toEndOf="@+id/mandag"
         android:layout_marginLeft="72dp"
-        android:layout_marginStart="72dp" />
+        android:layout_marginStart="72dp"
+        android:layout_toEndOf="@+id/mandag"
+        android:layout_toRightOf="@+id/mandag" />
 
     <TextView
         android:id="@+id/onsdag"
@@ -47,10 +47,10 @@
         android:layout_height="wrap_content"
 
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/tTirsdag"
-        android:layout_toEndOf="@+id/tTirsdag"
         android:layout_marginLeft="39dp"
-        android:layout_marginStart="39dp" />
+        android:layout_marginStart="39dp"
+        android:layout_toEndOf="@+id/tTirsdag"
+        android:layout_toRightOf="@+id/tTirsdag" />
 
     <TextView
         android:id="@+id/torsdag"
@@ -58,21 +58,20 @@
         android:layout_height="wrap_content"
 
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/onsdag"
-        android:layout_toEndOf="@+id/onsdag"
         android:layout_marginLeft="64dp"
-        android:layout_marginStart="64dp" />
+        android:layout_marginStart="64dp"
+        android:layout_toEndOf="@+id/onsdag"
+        android:layout_toRightOf="@+id/onsdag" />
 
     <TextView
         android:id="@+id/fredag"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/torsdag"
-        android:layout_toEndOf="@+id/torsdag"
         android:layout_marginLeft="42dp"
-        android:layout_marginStart="42dp" />
+        android:layout_marginStart="42dp"
+        android:layout_toEndOf="@+id/torsdag"
+        android:layout_toRightOf="@+id/torsdag" />
 
     <CheckBox
         android:id="@+id/checkOut"
