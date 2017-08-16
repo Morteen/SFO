@@ -7,12 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    static ArrayList<Elev> elevListe;
+    Elev e1,e2,e3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Elev e1,e2,e3;
+
         e1=new Elev();
         e1.setDag("mandag");
         e1.setSFO_dager(0,true);
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         e3.setSFO_dager(0,true);
         ListView startListView = (ListView)findViewById(R.id.startListView) ;
 
-        ArrayList<Elev> elevListe = new ArrayList();
+        elevListe= new ArrayList();
         elevListe.add(e1);
         elevListe.add(e2);
         elevListe.add(e3);
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Sender brukeren til registrering av en ny elev
         if (id == R.id.action_Legg_til) {
-            Toast.makeText(getApplicationContext(),"Hei",Toast.LENGTH_LONG).show();
+
             Fragment addOne = new RegNyElev();
             android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.main, addOne);

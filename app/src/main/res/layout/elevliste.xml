@@ -15,7 +15,7 @@
         android:layout_toEndOf="@+id/fNavn"
         android:layout_toRightOf="@+id/fNavn"
         android:layout_weight="1"
-        android:text="Mandag" />
+         />
 
     <TextView
         android:id="@+id/fNavn"

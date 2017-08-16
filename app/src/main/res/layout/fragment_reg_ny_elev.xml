@@ -28,7 +28,7 @@
             android:layout_marginTop="52dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+           android:hint="Fornavn" />
 
         <EditText
             android:id="@+id/editEnavn"
@@ -39,7 +39,7 @@
             android:layout_below="@+id/editFnavn"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+          android:hint="Etternavn" />
 
         <CheckBox
             android:id="@+id/checkBoxMandag"
@@ -107,11 +107,20 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
+           android:hint="Telefon"
             android:layout_below="@+id/checkBoxOnsdag"
             android:layout_alignLeft="@+id/checkBoxFredag"
             android:layout_alignStart="@+id/checkBoxFredag"
             android:layout_marginTop="28dp" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:text="Legg til"
+            android:layout_below="@+id/editTlf"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
 </FrameLayout>
