@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/entilbake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            android:padding="5dp"
+            android:text="T"
+            />
+
+        <TextView
+            android:id="@+id/visalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            android:padding="5dp"
+            android:text="Vis alle"
+            />
+
+        <TextView
+            android:id="@+id/trinn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+         android:layout_margin="30dp"
+            android:padding="5dp"
+            android:text="1"
+           />
+        <TextView
+            android:id="@+id/trinn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            android:padding="5dp"
+            android:text="2"/>
+        <TextView
+            android:id="@+id/trinn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            android:padding="5dp"
+            android:text="3"/>
+        <TextView
+            android:id="@+id/trinn4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            android:padding="5dp"
+            android:text="4"/>
+        <TextView
+            android:id="@+id/enFrem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="30dp"
+            android:padding="5dp"
+            android:text="F"
+            />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/elevListView"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="7dp"
+        android:paddingLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+</LinearLayout>
