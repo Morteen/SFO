@@ -36,7 +36,7 @@ public class FragmentOverSikt extends Fragment {
 
     ListView elevListView;
     TextView trinn1,trinn2,trinn3,trinn4,visAlle,enFrem,enTilbake;
-    ElevAdapter adapter;
+    OversiktAdapter adapter;
     private int sidetall =0;
 
 
@@ -251,13 +251,10 @@ public class FragmentOverSikt extends Fragment {
 
                 try {
 
-                    //startListView = (ListView) findViewById(R.id.startList);
-                    //tmListe = Turmaal.lagTurListe(result);
+
                     MainActivity.JSONServerList = Elev.lagElevListe(result);
 
-                    //TurAdapter adapter = new TurAdapter(getApplicationContext(), tmListe);
-                    //startListView.setAdapter(adapter);
-                    //startListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
 
 
                 } catch (JSONException e) {
@@ -282,7 +279,7 @@ public class FragmentOverSikt extends Fragment {
                     e.printStackTrace();
                 }
 
-                 adapter = new ElevAdapter(getActivity(), MainActivity.JSONServerList);
+                 adapter = new OversiktAdapter(getActivity(), MainActivity.JSONServerList);
                 elevListView.setAdapter(adapter);
 
 
@@ -303,7 +300,7 @@ public class FragmentOverSikt extends Fragment {
 
 private void visSide(int side){
         if(side==0){
-            adapter = new ElevAdapter(getActivity(),MainActivity.JSONServerList);
+            adapter = new OversiktAdapter(getActivity(),MainActivity.JSONServerList);
             elevListView.setAdapter(adapter);
         }else
         {
@@ -314,7 +311,7 @@ private void visSide(int side){
                     valgteTrinnListe.add(MainActivity.JSONServerList.get(i));
                 }
             }
-            adapter = new ElevAdapter(getActivity(),valgteTrinnListe);
+            adapter = new OversiktAdapter(getActivity(),valgteTrinnListe);
             elevListView.setAdapter(adapter);
         }
 
