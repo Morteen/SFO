@@ -58,8 +58,8 @@ public class ElevAdapter extends BaseAdapter {
 
 
             viewHolder.tvfNavn = (TextView) convertView.findViewById(R.id.fNavn);
-            viewHolder.tveNavn = (TextView) convertView.findViewById(R.id.eNavn);
-            viewHolder.tvKlasse = (TextView) convertView.findViewById(R.id.klasse);
+            //viewHolder.tveNavn = (TextView) convertView.findViewById(R.id.eNavn);
+            //viewHolder.tvKlasse = (TextView) convertView.findViewById(R.id.klasse);
             viewHolder.tvTrinn = (TextView) convertView.findViewById(R.id.trinn);
 
 
@@ -73,10 +73,10 @@ public class ElevAdapter extends BaseAdapter {
 
         Elev currentElev = Elever.get(position);
         //Setter verdien til  turmaal objektet  i denne posisjonen i riktig textview
-        viewHolder.tvfNavn.setText(currentElev.getFnavn());
-        viewHolder.tveNavn.setText(currentElev.getEnavn());
-        viewHolder.tvTrinn.setText(Integer.toString(currentElev.getTrinn()));
-        viewHolder.tvKlasse.setText(currentElev.getKlasse());
+        viewHolder.tvfNavn.setText(currentElev.getFnavn()+" "+currentElev.getEnavn());
+        //viewHolder.tveNavn.setText(currentElev.getEnavn());
+        viewHolder.tvTrinn.setText(Integer.toString(currentElev.getTrinn())+" "+currentElev.getKlasse());
+        //viewHolder.tvKlasse.setText();
 
 
 

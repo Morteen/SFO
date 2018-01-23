@@ -32,7 +32,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     static ArrayList<Elev> elevListe, JSONServerList;
     Elev e1, e2, e3;
-
+ static ElevAdapter elevAdapter;
+  static OversiktAdapter oversiktAdapter;
     static boolean erPaaNett;
 
 
@@ -51,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         erPaaNett = isOnline();
+        if(isOnline()){
+            new JsonStartTask().execute();
+        }
 
     }
 
@@ -181,24 +185,20 @@ public class MainActivity extends AppCompatActivity {
                 progressDialog.cancel();
 
 
-                Toast.makeText(getApplicationContext(), "JsonData:" + result, Toast.LENGTH_SHORT).show();
 
 
-                try {
 
-                    //startListView = (ListView) findViewById(R.id.startList);
-                    //tmListe = Turmaal.lagTurListe(result);
+              /*  try {
+
+
                     JSONServerList = Elev.lagElevListe(result);
 
-                    //TurAdapter adapter = new TurAdapter(getApplicationContext(), tmListe);
-                    //startListView.setAdapter(adapter);
-                    //startListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.e("JsonExeption", e.getMessage());
-                }
+                }*/
                 JSONArray mArray;
                 try {
                     mArray = new JSONArray(result);
@@ -212,11 +212,12 @@ public class MainActivity extends AppCompatActivity {
                         JSONServerList.add(elev);
 
                     }
+                    Toast.makeText(getApplicationContext(), "JsonListsize:" + JSONServerList.size(), Toast.LENGTH_SHORT).show();
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                ElevAdapter adapter = new ElevAdapter(getApplicationContext(), JSONServerList);
+
 
 
             } else {

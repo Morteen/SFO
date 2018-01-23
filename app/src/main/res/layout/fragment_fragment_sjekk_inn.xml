@@ -1,14 +1,90 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.morten.sfo_organiser.FragmentSjekkInn">
+    tools:context="com.example.morten.sfo_organiser.FragmentSjekkInn"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hei fra Sjekkin fragment" />
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Sjekk inn"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_gravity="center"
+         android:layout_marginTop="10dp">
+
+         <TextView
+             android:id="@+id/sjekkInnTilbake"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_margin="30dp"
+             android:padding="5dp"
+             android:text="T"
+             />
+
+         <TextView
+             android:id="@+id/sjekkInnVisalle"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_margin="30dp"
+             android:padding="5dp"
+             android:text="Vis alle"
+             />
+
+         <TextView
+             android:id="@+id/sjekkInnTrinn1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_margin="30dp"
+             android:padding="5dp"
+             android:text="1"
+             />
+         <TextView
+             android:id="@+id/sjekkInnTrinn2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_margin="30dp"
+             android:padding="5dp"
+             android:text="2"/>
+         <TextView
+             android:id="@+id/sjekkInnTrinn3"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_margin="30dp"
+             android:padding="5dp"
+             android:text="3"/>
+         <TextView
+             android:id="@+id/sjekkInnTrinn4"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_margin="30dp"
+             android:padding="5dp"
+             android:text="4"/>
+         <TextView
+             android:id="@+id/sjekkInnEnFrem"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:layout_margin="30dp"
+             android:padding="5dp"
+             android:text="F"
+             />
+     </LinearLayout>
 
     <ListView
         android:id="@+id/sjekkInnListView"
@@ -20,4 +96,4 @@
 
     </ListView>
 
-</FrameLayout>
+</LinearLayout>
